@@ -27,7 +27,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
      * @param \JeffersonSimaoGoncalves\Utils\Links\RenderLink $renderLink
      * @return string
      */
-    protected function renderLink(RenderLink $renderLink): string
+    public function renderLink(RenderLink $renderLink): string
     {
         $params = ['href' => $renderLink->link];
         if (isset($renderLink->classLink)) {
@@ -47,7 +47,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
      * @param \JeffersonSimaoGoncalves\Utils\Links\RenderForm $renderForm
      * @return string
      */
-    protected function renderForm(RenderForm $renderForm): string
+    public function renderForm(RenderForm $renderForm): string
     {
         $formId = strtolower($renderForm->id);
         $formName = 'form_post_' . strtolower($renderForm->action) . '_' . $formId;
