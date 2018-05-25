@@ -20,7 +20,8 @@
     "source": "https://github.com/jeffersonsimaogoncalves/cakephp-utils"
   },
   "require": {
-    "php": ">=7.0"
+    "php": ">=7.0",
+    "league/fractal": ">=0.13.0"
   },
   "autoload": {
     "psr-4": {
