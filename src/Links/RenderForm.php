@@ -18,7 +18,7 @@ namespace JeffersonSimaoGoncalves\Utils\Links;
  *
  * @package JeffersonSimaoGoncalves\Utils\Links
  */
-abstract class RenderForm extends RenderBase
+class RenderForm extends RenderBase
 {
     /**
      * RenderForm constructor.
