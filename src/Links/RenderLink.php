@@ -8,19 +8,18 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Links;
 
+use JeffersonSimaoGoncalves\Utils\TypeLink;
+
 /**
  * Class RenderLink
  *
- * @property string link
- * @property string classLink
- * @property string classIcon
  * @property string title
  * @property string typeLink
  * @property bool blank
  *
  * @package JeffersonSimaoGoncalves\Utils\Links
  */
-class RenderLink
+class RenderLink extends RenderBase
 {
     /**
      * RenderLink constructor.
@@ -32,28 +31,12 @@ class RenderLink
     }
 
     /**
-     * @return string
-     */
-    public function getPrefixClassLink(): string
-    {
-        return isset($this->classLink) ? explode('-', $this->classLink)[0] : '';
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrefixClassIcon(): string
-    {
-        return isset($this->classIcon) ? explode('-', $this->classIcon)[0] : '';
-    }
-
-    /**
      * @param string $link
      * @param string $title
      */
     public function linkView(string $link, string $title = '')
     {
-        $this->typeLink = 'View';
+        $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
         $this->classLink = 'btn-default';
@@ -66,7 +49,7 @@ class RenderLink
      */
     public function linkAdd(string $link, string $title = '')
     {
-        $this->typeLink = 'View';
+        $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
         $this->classLink = 'btn-success';
@@ -79,7 +62,7 @@ class RenderLink
      */
     public function link(string $link, string $title = '')
     {
-        $this->typeLink = 'link';
+        $this->typeLink = TypeLink::LINK;
         $this->link = $link;
         $this->title = $title;
     }
@@ -90,7 +73,7 @@ class RenderLink
      */
     public function linkBack(string $link, string $title = '')
     {
-        $this->typeLink = 'back';
+        $this->typeLink = TypeLink::BACK;
         $this->link = $link;
         $this->title = $title;
         $this->classLink = 'btn-default';
@@ -102,7 +85,7 @@ class RenderLink
      */
     public function linkEdit(string $link)
     {
-        $this->typeLink = 'edit';
+        $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
         $this->classLink = 'btn-primary';
         $this->classIcon = 'glyphicon-pencil';
@@ -113,7 +96,7 @@ class RenderLink
      */
     public function linkPdf(string $link)
     {
-        $this->typeLink = 'pdf';
+        $this->typeLink = TypeLink::FILE_PDF;
         $this->link = $link;
         $this->blank = true;
         $this->classLink = 'btn-success';
@@ -125,7 +108,7 @@ class RenderLink
      */
     public function linkAccept(string $link)
     {
-        $this->typeLink = 'edit';
+        $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
         $this->classLink = 'btn-success';
         $this->classIcon = 'fa-check-circle';
