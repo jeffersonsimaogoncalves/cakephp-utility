@@ -49,8 +49,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
      */
     public function renderForm(RenderForm $renderForm): string
     {
-        $formId = strtolower($renderForm->id);
-        $formName = 'form_post_' . strtolower($renderForm->action) . '_' . $formId;
+        $formName = $renderForm->getFormName();
         if ($renderForm->confirmBox) {
             $json = CallbackFunction::resolve(json_encode(['message' => $renderForm->confirmText, 'buttons' => ['confirm' => ['label' => '<i class="fa fa-check"></i> Sim', 'className' => 'btn-primary'], 'cancel' => ['label' => '<i class="fa fa-times"></i> Não', 'className' => 'btn-default']], 'callback' => new CallbackFunction('function (result) {if (result){ document.' . $formName . '.submit(); }}')]));
 

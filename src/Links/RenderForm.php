@@ -54,4 +54,15 @@ class RenderForm extends RenderBase
         $this->confirmText = 'Tem certeza de que deseja excluir # "<b>' . $description . '</b>"?';
     }
 
+    /**
+     * @return string
+     */
+    public function getFormName()
+    {
+        $return = 'form_post_' . $this->action . '_' . $this->id;
+        $return = str_replace('-', '_', $return);
+
+        return strtolower($return);
+    }
+
 }
