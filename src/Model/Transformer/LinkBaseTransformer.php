@@ -12,6 +12,7 @@ use JeffersonSimaoGoncalves\Utils\Lib\CallbackFunction;
 use JeffersonSimaoGoncalves\Utils\Lib\HtmlTrait;
 use JeffersonSimaoGoncalves\Utils\Links\RenderForm;
 use JeffersonSimaoGoncalves\Utils\Links\RenderLink;
+use JeffersonSimaoGoncalves\Utils\TypeLink;
 use League\Fractal\TransformerAbstract;
 
 /**
@@ -25,6 +26,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
 
     /**
      * @param \JeffersonSimaoGoncalves\Utils\Links\RenderLink $renderLink
+     *
      * @return string
      */
     public function renderLink(RenderLink $renderLink): string
@@ -36,7 +38,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
         if ($renderLink->blank) {
             $params['target'] = '_blank';
         }
-        if ($renderLink->typeLink === 'link' && !empty($renderLink->title)) {
+        if ($renderLink->typeLink === TypeLink::LINK && !empty($renderLink->title)) {
             return $this->a($params, $renderLink->title);
         }
 
@@ -45,6 +47,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
 
     /**
      * @param \JeffersonSimaoGoncalves\Utils\Links\RenderForm $renderForm
+     *
      * @return string
      */
     public function renderForm(RenderForm $renderForm): string

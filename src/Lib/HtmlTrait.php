@@ -8,6 +8,8 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Lib;
 
+use HtmlGenerator\HtmlTag;
+
 /**
  * Trait HtmlTrait
  *
@@ -18,18 +20,20 @@ trait HtmlTrait
     /**
      * @param array $params
      * @param $content
+     *
      * @return string
      */
     protected function a(array $params, $content)
     {
         $params = $this->formatAttributes($params);
 
-        return '<a' . $params . '>' . $content . '</a>';
+        return HtmlTag::createElement('a')->set($params)->text($content);
     }
 
     /**
      * @param array $options
      * @param array $exclude
+     *
      * @return string
      */
     protected function formatAttributes(array $options, array $exclude = [])
@@ -59,6 +63,7 @@ trait HtmlTrait
      * @param $key
      * @param $value
      * @param bool $escape
+     *
      * @return string
      */
     protected function _formatAttribute($key, $value, $escape = true)
@@ -85,20 +90,10 @@ trait HtmlTrait
     }
 
     /**
-     * @param $params
-     * @return string
-     */
-    protected function i($params)
-    {
-        $params = $this->formatAttributes($params);
-
-        return '<i ' . $params . ' ></i>';
-    }
-
-    /**
      * @param $text
      * @param bool $double
      * @param null $charset
+     *
      * @return array|string
      */
     protected function h($text, $double = true, $charset = null)
@@ -138,5 +133,17 @@ trait HtmlTrait
         }
 
         return htmlspecialchars($text, ENT_QUOTES | ENT_SUBSTITUTE, $charset ?: $defaultCharset, $double);
+    }
+
+    /**
+     * @param $params
+     *
+     * @return string
+     */
+    protected function i($params)
+    {
+        $params = $this->formatAttributes($params);
+
+        return '<i ' . $params . ' ></i>';
     }
 }

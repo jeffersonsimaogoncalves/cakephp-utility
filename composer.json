@@ -21,6 +21,7 @@
   },
   "require": {
     "php": ">=7.0",
+    "airmanbzh/php-html-generator": "^1.0",
     "league/fractal": ">=0.13.0"
   },
   "autoload": {
