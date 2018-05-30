@@ -26,6 +26,7 @@ class RenderLink extends RenderBase
      */
     public function __construct()
     {
+        parent::__construct();
         $this->blank = false;
         $this->title = '';
     }

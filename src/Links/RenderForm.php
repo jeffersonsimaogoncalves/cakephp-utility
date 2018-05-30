@@ -25,6 +25,7 @@ class RenderForm extends RenderBase
      */
     public function __construct()
     {
+        parent::__construct();
         $this->confirmBox = false;
         $this->confirmText = '';
     }

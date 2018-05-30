@@ -20,6 +20,16 @@ namespace JeffersonSimaoGoncalves\Utils\Links;
 abstract class RenderBase
 {
     /**
+     * RenderBase constructor.
+     */
+    public function __construct()
+    {
+        $this->link = '';
+        $this->classIcon = '';
+        $this->classLink = '';
+    }
+
+    /**
      * @return string
      */
     public function getPrefixClassLink(): string
