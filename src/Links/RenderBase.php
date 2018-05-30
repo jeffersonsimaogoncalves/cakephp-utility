@@ -15,6 +15,8 @@ namespace JeffersonSimaoGoncalves\Utils\Links;
  * @property string classLink
  * @property string classIcon
  *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
+ *
  * @package JeffersonSimaoGoncalves\Utils\Links
  */
 abstract class RenderBase
@@ -32,9 +34,25 @@ abstract class RenderBase
     /**
      * @return string
      */
+    public function getClassLink(): string
+    {
+        return $this->getPrefixClassLink() . ' ' . $this->classLink;
+    }
+
+    /**
+     * @return string
+     */
     public function getPrefixClassLink(): string
     {
         return explode('-', $this->classLink)[0];
+    }
+
+    /**
+     * @return string
+     */
+    public function getClassIcon(): string
+    {
+        return $this->getPrefixClassIcon() . ' ' . $this->classIcon;
     }
 
     /**

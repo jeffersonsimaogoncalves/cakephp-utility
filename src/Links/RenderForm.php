@@ -11,10 +11,12 @@ namespace JeffersonSimaoGoncalves\Utils\Links;
 /**
  * Class RenderForm
  *
- * @property bool confirmBox
+ * @property bool   confirmBox
  * @property string confirmText
  * @property string action
  * @property string id
+ *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
  * @package JeffersonSimaoGoncalves\Utils\Links
  */
@@ -32,7 +34,7 @@ class RenderForm extends RenderBase
 
     /**
      * @param string $link
-     * @param bool $status
+     * @param bool   $status
      */
     public function formStatus(string $link, bool $status)
     {

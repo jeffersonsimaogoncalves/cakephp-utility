@@ -11,6 +11,8 @@ use JsonSerializable;
 /**
  * Class CallbackFunction
  *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
+ *
  * @package JeffersonSimaoGoncalves\Utils\Lib
  */
 class CallbackFunction implements JsonSerializable

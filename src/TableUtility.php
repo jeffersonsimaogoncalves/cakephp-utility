@@ -12,10 +12,12 @@ namespace JeffersonSimaoGoncalves\Utils;
  * Class TableUtility
  *
  * @property string table
- * @property array columns
- * @property int count
- * @property array data
- * @property array order
+ * @property array  columns
+ * @property int    count
+ * @property array  data
+ * @property array  order
+ *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
  * @package JeffersonSimaoGoncalves\Utils
  */

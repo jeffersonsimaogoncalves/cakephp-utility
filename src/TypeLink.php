@@ -11,6 +11,8 @@ namespace JeffersonSimaoGoncalves\Utils;
 /**
  * Class TypeLink
  *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
+ *
  * @package JeffersonSimaoGoncalves\Utils
  */
 class TypeLink

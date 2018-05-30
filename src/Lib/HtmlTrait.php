@@ -13,21 +13,25 @@ use HtmlGenerator\HtmlTag;
 /**
  * Trait HtmlTrait
  *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
+ *
  * @package JeffersonSimaoGoncalves\Utils\Lib
  */
 trait HtmlTrait
 {
     /**
-     * @param array $params
-     * @param $content
+     * @param array  $params
+     * @param string $content
      *
      * @return string
      */
-    protected function a(array $params, $content)
+    protected function a(array $params, string $content)
     {
-        $params = $this->formatAttributes($params);
+        $a = HtmlTag::createElement('a');
+        $a->set($this->formatAttributes($params));
+        $a->text($content);
 
-        return HtmlTag::createElement('a')->set($params)->text($content);
+        return $a->toString();
     }
 
     /**
@@ -58,8 +62,8 @@ trait HtmlTrait
     }
 
     /**
-     * @param $key
-     * @param $value
+     * @param      $key
+     * @param      $value
      * @param bool $escape
      *
      * @return string
@@ -88,7 +92,7 @@ trait HtmlTrait
     }
 
     /**
-     * @param $text
+     * @param      $text
      * @param bool $double
      * @param null $charset
      *
@@ -123,10 +127,6 @@ trait HtmlTrait
             }
         }
         if (is_string($double)) {
-            deprecationWarning(
-                'Passing charset string for 2nd argument is deprecated. ' .
-                'Use the 3rd argument instead.'
-            );
             $charset = $double;
         }
 
@@ -134,14 +134,58 @@ trait HtmlTrait
     }
 
     /**
-     * @param $params
+     * @param array $params
      *
      * @return string
      */
-    protected function i($params)
+    protected function i(array $params)
     {
-        $params = $this->formatAttributes($params);
+        $i = HtmlTag::createElement('i');
+        $i->set($this->formatAttributes($params));
 
-        return HtmlTag::createElement('i')->set($params);
+        return $i->toString();
+    }
+
+    /**
+     * @param array $params
+     *
+     * @return string
+     */
+    protected function input(array $params)
+    {
+        $input = HtmlTag::createElement('input');
+        $input->set($this->formatAttributes($params));
+
+        return $input->toString();
+    }
+
+    /**
+     * @param array  $params
+     * @param string $content
+     *
+     * @return string
+     */
+    protected function div(array $params, string $content)
+    {
+        $div = HtmlTag::createElement('div');
+        $div->set($this->formatAttributes($params));
+        $div->text($content);
+
+        return $div->toString();
+    }
+
+    /**
+     * @param array  $params
+     * @param string $content
+     *
+     * @return string
+     */
+    protected function form(array $params, string $content)
+    {
+        $form = HtmlTag::createElement('form');
+        $form->set($this->formatAttributes($params));
+        $form->text($content);
+
+        return $form->toString();
     }
 }

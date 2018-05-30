@@ -15,7 +15,9 @@ use JeffersonSimaoGoncalves\Utils\TypeLink;
  *
  * @property string title
  * @property string typeLink
- * @property bool blank
+ * @property bool   blank
+ *
+ * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
  * @package JeffersonSimaoGoncalves\Utils\Links
  */
