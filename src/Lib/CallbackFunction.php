@@ -29,6 +29,7 @@ class CallbackFunction implements JsonSerializable
      * Resolve all hashes in a JSON string with their respective javascript code
      *
      * @param string $json JSON-encoded data
+     *
      * @return string JSON-encoded data where hashes are replaced with javascript code
      */
     public static function resolve(string $json): string
@@ -53,7 +54,7 @@ class CallbackFunction implements JsonSerializable
      * CallbackFunction constructor.
      *
      * @param string $name Name of Javascript function to call
-     * @param array $args Optional array of arguments to be passed when calling
+     * @param array  $args Optional array of arguments to be passed when calling
      */
     public function __construct(string $name, array $args = [])
     {
