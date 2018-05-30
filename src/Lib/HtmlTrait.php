@@ -25,9 +25,17 @@ trait HtmlTrait
      */
     protected function a(array $params, $content)
     {
-        $params = $this->formatAttributes($params);
-
         return HtmlTag::createElement('a')->set($params)->text($content);
+    }
+
+    /**
+     * @param $params
+     *
+     * @return string
+     */
+    protected function i($params)
+    {
+        return HtmlTag::createElement('i')->set($params);
     }
 
     /**
@@ -133,17 +141,5 @@ trait HtmlTrait
         }
 
         return htmlspecialchars($text, ENT_QUOTES | ENT_SUBSTITUTE, $charset ?: $defaultCharset, $double);
-    }
-
-    /**
-     * @param $params
-     *
-     * @return string
-     */
-    protected function i($params)
-    {
-        $params = $this->formatAttributes($params);
-
-        return '<i ' . $params . ' ></i>';
     }
 }
