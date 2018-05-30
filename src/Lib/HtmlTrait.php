@@ -34,11 +34,10 @@ trait HtmlTrait
      * @param array $options
      * @param array $exclude
      *
-     * @return string
+     * @return array
      */
     protected function formatAttributes(array $options, array $exclude = [])
     {
-        $insertBefore = ' ';
         $options = (array)$options + ['escape' => true];
 
         if (!is_array($exclude)) {
@@ -51,12 +50,11 @@ trait HtmlTrait
 
         foreach ($options as $key => $value) {
             if (!isset($exclude[$key]) && $value !== false && $value !== null) {
-                $attributes[] = $this->_formatAttribute($key, $value, $escape);
+                $attributes[$key] = $this->_formatAttribute($key, $value, $escape);
             }
         }
-        $out = trim(implode(' ', $attributes));
 
-        return $out ? $insertBefore . $out : '';
+        return $attributes;
     }
 
     /**
@@ -86,7 +84,7 @@ trait HtmlTrait
             return '';
         }
 
-        return $key . '="' . ($escape ? $this->h($value) : $value) . '"';
+        return ($escape ? $this->h($value) : $value);
     }
 
     /**
@@ -144,6 +142,6 @@ trait HtmlTrait
     {
         $params = $this->formatAttributes($params);
 
-        return HtmlTag::createElement('i')->attr($params);
+        return HtmlTag::createElement('i')->set($params);
     }
 }
