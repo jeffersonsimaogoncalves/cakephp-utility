@@ -8,6 +8,7 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Model\Transformer;
 
+use HtmlGenerator\HtmlTag;
 use JeffersonSimaoGoncalves\Utils\Lib\CallbackFunction;
 use JeffersonSimaoGoncalves\Utils\Lib\HtmlTrait;
 use JeffersonSimaoGoncalves\Utils\Links\RenderForm;
@@ -69,7 +70,7 @@ abstract class LinkBaseTransformer extends TransformerAbstract
 
         $i = $this->i(['class' => $iconPrefix . ' ' . $renderForm->classIcon]);
 
-        $content = '<div ' . $divParams . '><form ' . $formParams . ' ><input ' . $inputParams . ' /></form></div>' . $i;
+        $content = HtmlTag::createElement('div')->set($divParams)->text(HtmlTag::createElement('form')->set($formParams)->text(HtmlTag::createElement('input')->set($inputParams))) . $i;
 
         return $this->a(['href' => '#', 'class' => $linkPrefix . ' ' . $renderForm->classLink, 'onclick' => $eventOnClick], $content);
     }
