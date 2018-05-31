@@ -79,7 +79,7 @@ trait HtmlTrait
         $truthy = [1, '1', true, 'true', $key];
         $isMinimized = isset($this->_compactAttributes[$key]);
         if (!preg_match('/\A(\w|[.-])+\z/', $key)) {
-            $key = $this->h($key);
+            $key = h($key);
         }
         if ($isMinimized && in_array($value, $truthy, true)) {
             return "$key=\"$key\"";
@@ -88,50 +88,9 @@ trait HtmlTrait
             return '';
         }
 
-        return ($escape ? $this->h($value) : $value);
+        return ($escape ? h($value) : $value);
     }
 
-    /**
-     * @param      $text
-     * @param bool $double
-     * @param null $charset
-     *
-     * @return array|string
-     */
-    protected function h($text, $double = true, $charset = null)
-    {
-        if (is_string($text)) {
-            //optimize for strings
-        } elseif (is_array($text)) {
-            $texts = [];
-            foreach ($text as $k => $t) {
-                $texts[$k] = $this->h($t, $double, $charset);
-            }
-
-            return $texts;
-        } elseif (is_object($text)) {
-            if (method_exists($text, '__toString')) {
-                $text = (string)$text;
-            } else {
-                $text = '(object)' . get_class($text);
-            }
-        } elseif ($text === null || is_scalar($text)) {
-            return $text;
-        }
-
-        static $defaultCharset = false;
-        if ($defaultCharset === false) {
-            $defaultCharset = mb_internal_encoding();
-            if ($defaultCharset === null) {
-                $defaultCharset = 'UTF-8';
-            }
-        }
-        if (is_string($double)) {
-            $charset = $double;
-        }
-
-        return htmlspecialchars($text, ENT_QUOTES | ENT_SUBSTITUTE, $charset ?: $defaultCharset, $double);
-    }
 
     /**
      * @param array $params

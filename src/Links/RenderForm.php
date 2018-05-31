@@ -8,6 +8,8 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Links;
 
+use Cake\Utility\Text;
+
 /**
  * Class RenderForm
  *
@@ -63,7 +65,7 @@ class RenderForm extends RenderBase
     public function getFormName()
     {
         $return = 'form_post_' . $this->action . '_' . $this->id;
-        $return = str_replace('-', '_', $return);
+        $return = Text::slug($return, ['replacement' => '_']);
 
         return strtolower($return);
     }
