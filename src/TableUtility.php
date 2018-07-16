@@ -12,10 +12,10 @@ namespace JeffersonSimaoGoncalves\Utils;
  * Class TableUtility
  *
  * @property string table
- * @property array  columns
- * @property int    count
- * @property array  data
- * @property array  order
+ * @property array columns
+ * @property int|array count
+ * @property array data
+ * @property array order
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
@@ -26,30 +26,42 @@ class TableUtility
     /**
      * @return array
      */
-    public function getClass(): array
+    public function getClass()
+    : array
     {
         return [
-            'class' => 'table table-bordered table-striped',
+            'class' => 'table table-bordered table-striped table-responsive',
         ];
+    }
+
+    /**
+     * @param int $countFiltered
+     * @param int $countTotal
+     */
+    public function setCount($countFiltered, $countTotal)
+    {
+        $this->count = ($countFiltered < $countTotal) ? [$countFiltered, $countTotal] : $countTotal;
     }
 
     /**
      * @return array
      */
-    public function getOptions(): array
+    public function getOptions()
+    : array
     {
         return [
-            'data' => $this->data,
+            'data'         => $this->data,
             'deferLoading' => $this->count,
-            'columns' => $this->columns,
-            'order' => $this->order,
+            'columns'      => $this->columns,
+            'order'        => $this->order,
         ];
     }
 
     /**
      * @return string
      */
-    public function getTable(): string
+    public function getTable()
+    : string
     {
         return strtolower($this->table) . '-table';
     }
