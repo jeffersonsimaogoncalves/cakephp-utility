@@ -50,12 +50,12 @@ class RenderLink extends RenderBase
      * @param string $link
      * @param string $title
      */
-    public function linkImage(string $link, string $title = '')
+    public function linkImageModal(string $link, string $title = '')
     {
         $this->typeLink = TypeLink::FILE_IMAGE;
         $this->link = $link;
         $this->title = $title;
-        $this->classLink = 'btn-success';
+        $this->classLink = 'btn-success imageview';
         $this->classIcon = 'fa-picture-o';
     }
 
