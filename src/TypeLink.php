@@ -22,4 +22,5 @@ class TypeLink
     const LINK = 'LINK';
     const BACK = 'BACK';
     const FILE_PDF = 'FILE_PDF';
+    const FILE_IMAGE = 'FILE_IMAGE';
 }

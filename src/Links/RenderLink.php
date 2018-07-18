@@ -15,7 +15,7 @@ use JeffersonSimaoGoncalves\Utils\TypeLink;
  *
  * @property string title
  * @property string typeLink
- * @property bool   blank
+ * @property bool blank
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
@@ -44,6 +44,19 @@ class RenderLink extends RenderBase
         $this->title = $title;
         $this->classLink = 'btn-default';
         $this->classIcon = 'glyphicon-eye-open';
+    }
+
+    /**
+     * @param string $link
+     * @param string $title
+     */
+    public function linkImage(string $link, string $title = '')
+    {
+        $this->typeLink = TypeLink::FILE_IMAGE;
+        $this->link = $link;
+        $this->title = $title;
+        $this->classLink = 'btn-success';
+        $this->classIcon = 'fa-picture-o';
     }
 
     /**
