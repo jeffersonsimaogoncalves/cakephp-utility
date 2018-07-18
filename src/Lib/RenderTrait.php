@@ -28,7 +28,8 @@ trait RenderTrait
      *
      * @return string
      */
-    public function renderLink(RenderLink $renderLink): string
+    public function renderLink(RenderLink $renderLink)
+    : string
     {
         $params = ['href' => $renderLink->link];
         if (isset($renderLink->classLink)) {
@@ -39,6 +40,8 @@ trait RenderTrait
         }
         if ($renderLink->typeLink === TypeLink::LINK && !empty($renderLink->title)) {
             return $this->a($params, $renderLink->title);
+        } else if (!empty($renderLink->title)) {
+            $params['title'] = $renderLink->title;
         }
 
         return $this->a($params, $this->i(['class' => $renderLink->getClassIcon()]));
@@ -49,7 +52,8 @@ trait RenderTrait
      *
      * @return string
      */
-    public function renderForm(RenderForm $renderForm): string
+    public function renderForm(RenderForm $renderForm)
+    : string
     {
         $formName = $renderForm->getFormName();
         if ($renderForm->confirmBox) {
