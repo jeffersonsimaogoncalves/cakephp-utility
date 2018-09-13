@@ -21,6 +21,7 @@
   },
   "require": {
     "php": ">=7.0",
+    "ext-json": "^1.6",
     "airmanbzh/php-html-generator": "^1.0",
     "cakephp/utility": "^3.6",
     "league/fractal": ">=0.13.0"

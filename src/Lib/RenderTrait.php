@@ -68,7 +68,7 @@ trait RenderTrait
         $form = $this->form(['class' => 'hidden invisible', 'style' => 'display: none;', 'name' => $formName, 'method' => 'post', 'action' => $renderForm->link], $input);
         $div = $this->div(['class' => 'hidden invisible', 'style' => 'display: none;'], $form);
 
-        $content = $div . $this->i(['class' => $renderForm->getClassIcon()]);
+        $content = $div . (!empty($renderForm->title) ? $renderForm->title : $this->i(['class' => $renderForm->getClassIcon()]));
 
         return $this->a(['href' => '#', 'class' => $renderForm->getClassLink(), 'onclick' => $eventOnClick], $content);
     }
