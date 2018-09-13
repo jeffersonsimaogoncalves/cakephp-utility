@@ -13,10 +13,11 @@ use Cake\Utility\Text;
 /**
  * Class RenderForm
  *
- * @property bool   confirmBox
+ * @property bool confirmBox
  * @property string confirmText
  * @property string action
  * @property string id
+ * @property string title
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
@@ -32,11 +33,12 @@ class RenderForm extends RenderBase
         parent::__construct();
         $this->confirmBox = false;
         $this->confirmText = '';
+        $this->title = '';
     }
 
     /**
      * @param string $link
-     * @param bool   $status
+     * @param bool $status
      */
     public function formStatus(string $link, bool $status)
     {
