@@ -16,6 +16,7 @@ namespace JeffersonSimaoGoncalves\Utils;
  * @property int|array count
  * @property array data
  * @property array order
+ * @property string url
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
@@ -49,12 +50,18 @@ class TableUtility
     public function getOptions()
     : array
     {
-        return [
+        $data = [
             'data'         => $this->data,
             'deferLoading' => $this->count,
             'columns'      => $this->columns,
             'order'        => $this->order,
         ];
+        
+        if (isset($this->url)) {
+            $data['url'] = $this->url;
+        }
+
+        return $data;
     }
 
     /**
