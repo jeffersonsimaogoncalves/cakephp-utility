@@ -56,7 +56,7 @@ class TableUtility
             'columns'      => $this->columns,
             'order'        => $this->order,
         ];
-        
+
         if (isset($this->url)) {
             $data['url'] = $this->url;
         }
