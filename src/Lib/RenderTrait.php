@@ -38,6 +38,10 @@ trait RenderTrait
         if ($renderLink->blank) {
             $params['target'] = '_blank';
         }
+        if ($renderLink->modalView) {
+            $params['data-toggle'] = 'modal';
+            $params['data-target'] = '#' . $renderLink->modalViewTarget;
+        }
         if ($renderLink->typeLink === TypeLink::LINK && !empty($renderLink->title)) {
             return $this->a($params, $renderLink->title);
         } else if (!empty($renderLink->title)) {
