@@ -58,7 +58,9 @@ class TableUtility
         ];
 
         if (isset($this->url)) {
-            $data['url'] = $this->url;
+            $data['ajax'] = [
+                'url' => $this->url,
+            ];
         }
 
         return $data;
