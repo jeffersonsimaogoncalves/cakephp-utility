@@ -33,6 +33,8 @@ class RenderLink extends RenderBase
         parent::__construct();
         $this->blank = false;
         $this->title = '';
+        $this->modalView = false;
+        $this->modalViewTarget = '';
     }
 
     /**
