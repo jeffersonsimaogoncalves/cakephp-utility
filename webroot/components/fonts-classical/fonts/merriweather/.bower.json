@@ -1,0 +1,32 @@
+{
+  "name": "Merriweather-Fontface",
+  "authors": [
+    "Tim Daubenschütz <tim.daubenschuetz@gmail.com>"
+  ],
+  "description": "The merriweather font-face already declared in a simple to import .css file",
+  "main": "merriweather.css",
+  "keywords": [
+    "merriweather",
+    "font",
+    "font-face",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "daubenschuetz.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "f5fee770c0",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f5fee770c034a92a3a551d52fcd34f210acf23d2"
+  },
+  "_source": "https://github.com/TimDaub/merriweather-font-face.git",
+  "_target": "*",
+  "_originalSource": "merriweather-fontface"
+}
