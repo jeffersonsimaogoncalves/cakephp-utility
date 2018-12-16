@@ -32,7 +32,7 @@ trait RenderTrait
     {
         $params = ['href' => $renderLink->link];
         if (isset($renderLink->classLink)) {
-            $params['class'] = $renderLink->getPrefixClassLink() . ' ' . $renderLink->classLink;
+            $params['class'] = $renderLink->classLink;
         }
         if ($renderLink->blank) {
             $params['target'] = '_blank';
