@@ -7,6 +7,7 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Links;
 
+use Cake\Core\Configure;
 use Cake\Utility\Text;
 
 /**
@@ -41,10 +42,12 @@ class RenderForm extends RenderBase
      */
     public function formStatus(string $link, bool $status)
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderForm.formStatus');
+        $value = ($status) ? 'activate' : 'inactivate';
         $this->link = $link;
-        $this->action = ($status) ? 'inactivate' : 'activate';
-        $this->classLink = ($status) ? 'btn-warning' : 'btn-success';
-        $this->classIcon = ($status) ? 'glyphicon-ban-circle' : 'glyphicon-ok-circle';
+        $this->action = $dados[$value]['action'];
+        $this->classLink = $dados[$value]['classLink'];
+        $this->classIcon = $dados[$value]['classIcon'];
     }
 
     /**
@@ -53,9 +56,10 @@ class RenderForm extends RenderBase
      */
     public function formDelete(string $link, string $description)
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderForm.formDelete');
         $this->link = $link;
-        $this->classLink = 'btn-danger';
-        $this->classIcon = 'glyphicon-trash';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
         $this->confirmBox = true;
         $this->confirmText = 'Tem certeza de que deseja excluir # "<b>' . $description . '</b>"?';
     }

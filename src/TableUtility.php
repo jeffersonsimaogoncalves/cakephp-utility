@@ -7,6 +7,8 @@
 
 namespace JeffersonSimaoGoncalves\Utils;
 
+use Cake\Core\Configure;
+
 /**
  * Class TableUtility
  *
@@ -30,7 +32,7 @@ class TableUtility
     : array
     {
         return [
-            'class' => 'table table-bordered table-striped table-responsive',
+            'class' => Configure::read('JeffersonSimaoGoncalves/Utils.TableUtility.class'),
         ];
     }
 

@@ -7,6 +7,7 @@
 
 namespace JeffersonSimaoGoncalves\Utils\Links;
 
+use Cake\Core\Configure;
 use JeffersonSimaoGoncalves\Utils\TypeLink;
 
 /**
@@ -44,11 +45,12 @@ class RenderLink extends RenderBase
      */
     public function linkView(string $link, string $title = '', bool $modalView = false, string $modalViewTarget = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkView');
         $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
-        $this->classLink = 'btn-default';
-        $this->classIcon = 'glyphicon-eye-open';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
         $this->modalView = $modalView;
         $this->modalViewTarget = $modalViewTarget;
     }
@@ -61,11 +63,12 @@ class RenderLink extends RenderBase
      */
     public function linkImage(string $link, string $title = '', bool $modalView = false, string $modalViewTarget = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkImage');
         $this->typeLink = TypeLink::FILE_IMAGE;
         $this->link = $link;
         $this->title = $title;
-        $this->classLink = 'btn-success imageview';
-        $this->classIcon = 'fa-picture-o';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
         $this->modalView = $modalView;
         $this->modalViewTarget = $modalViewTarget;
     }
@@ -76,11 +79,12 @@ class RenderLink extends RenderBase
      */
     public function linkAdd(string $link, string $title = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkAdd');
         $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
-        $this->classLink = 'btn-success';
-        $this->classIcon = 'glyphicon-plus';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
     }
 
     /**
@@ -100,11 +104,12 @@ class RenderLink extends RenderBase
      */
     public function linkBack(string $link, string $title = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkBack');
         $this->typeLink = TypeLink::BACK;
         $this->link = $link;
         $this->title = $title;
-        $this->classLink = 'btn-default';
-        $this->classIcon = 'glyphicon-list';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
     }
 
     /**
@@ -114,10 +119,11 @@ class RenderLink extends RenderBase
      */
     public function linkEdit(string $link, bool $modalView = false, string $modalViewTarget = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkEdit');
         $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
-        $this->classLink = 'btn-primary';
-        $this->classIcon = 'glyphicon-pencil';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
         $this->modalView = $modalView;
         $this->modalViewTarget = $modalViewTarget;
     }
@@ -129,11 +135,12 @@ class RenderLink extends RenderBase
      */
     public function linkPdf(string $link, bool $modalView = false, string $modalViewTarget = '')
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkPdf');
         $this->typeLink = TypeLink::FILE_PDF;
         $this->link = $link;
         $this->blank = true;
-        $this->classLink = 'btn-success';
-        $this->classIcon = 'fa-file-pdf-o';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
         $this->modalView = $modalView;
         $this->modalViewTarget = $modalViewTarget;
     }
@@ -143,9 +150,10 @@ class RenderLink extends RenderBase
      */
     public function linkAccept(string $link)
     {
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkAccept');
         $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
-        $this->classLink = 'btn-success';
-        $this->classIcon = 'fa-check-circle';
+        $this->classLink = $dados['classLink'];
+        $this->classIcon = $dados['classIcon'];
     }
 }

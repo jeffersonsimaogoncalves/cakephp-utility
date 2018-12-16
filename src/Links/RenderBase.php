@@ -33,32 +33,18 @@ abstract class RenderBase
     /**
      * @return string
      */
-    public function getClassLink(): string
+    public function getClassLink()
+    : string
     {
-        return $this->getPrefixClassLink() . ' ' . $this->classLink;
+        return $this->classLink;
     }
 
     /**
      * @return string
      */
-    public function getPrefixClassLink(): string
+    public function getClassIcon()
+    : string
     {
-        return explode('-', $this->classLink)[0];
-    }
-
-    /**
-     * @return string
-     */
-    public function getClassIcon(): string
-    {
-        return $this->getPrefixClassIcon() . ' ' . $this->classIcon;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrefixClassIcon(): string
-    {
-        return explode('-', $this->classIcon)[0];
+        return $this->classIcon;
     }
 }
