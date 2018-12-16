@@ -6,8 +6,8 @@ Configure::write('JeffersonSimaoGoncalves/Utils.TableUtility', [
     'class' => 'table table-bordered table-striped table-responsive',
 ]);
 Configure::write('JeffersonSimaoGoncalves/Utils.RenderForm.formStatus', [
-    'active'     => [
-        'action'    => 'active',
+    'activate'   => [
+        'action'    => 'activate',
         'classLink' => 'btn btn-success',
         'classIcon' => 'glyphicon glyphicon-ok-circle',
     ],
