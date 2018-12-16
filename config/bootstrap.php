@@ -33,7 +33,7 @@ Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkAdd', [
     'classLink' => 'btn btn-success',
     'classIcon' => 'glyphicon glyphicon-plus',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkAdd', [
+Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkBack', [
     'classLink' => 'btn btn-default',
     'classIcon' => 'glyphicon glyphicon-list',
 ]);
