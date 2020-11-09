@@ -5,16 +5,16 @@
  * Time: 23:33
  */
 
-namespace JeffersonSimaoGoncalves\Utils;
+namespace JeffersonSimaoGoncalves\Utility;
 
-use JeffersonSimaoGoncalves\Utils\Lib\CallbackFunction;
+use JeffersonSimaoGoncalves\Utility\Lib\CallbackFunction;
 
 /**
  * Trait CallbackTrait
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils
+ * @package JeffersonSimaoGoncalves\Utility
  */
 trait CallbackTrait
 {
@@ -24,7 +24,7 @@ trait CallbackTrait
      * @param string $name Name of Javascript function to call
      * @param array  $args Optional array of arguments to be passed when calling
      *
-     * @return \JeffersonSimaoGoncalves\Utils\Lib\CallbackFunction
+     * @return \JeffersonSimaoGoncalves\Utility\Lib\CallbackFunction
      */
     public function callback(string $name, array $args = []): CallbackFunction
     {

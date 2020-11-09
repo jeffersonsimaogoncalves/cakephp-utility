@@ -5,7 +5,7 @@
  * Time: 13:37
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Links;
+namespace JeffersonSimaoGoncalves\Utility\Links;
 
 /**
  * Class RenderBase
@@ -16,7 +16,7 @@ namespace JeffersonSimaoGoncalves\Utils\Links;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Links
+ * @package JeffersonSimaoGoncalves\Utility\Links
  */
 abstract class RenderBase
 {

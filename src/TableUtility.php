@@ -5,7 +5,7 @@
  * Time: 23:31
  */
 
-namespace JeffersonSimaoGoncalves\Utils;
+namespace JeffersonSimaoGoncalves\Utility;
 
 use Cake\Core\Configure;
 
@@ -21,7 +21,7 @@ use Cake\Core\Configure;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils
+ * @package JeffersonSimaoGoncalves\Utility
  */
 class TableUtility
 {

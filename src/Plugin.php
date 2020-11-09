@@ -7,7 +7,7 @@
  * Time: 16:49
  */
 
-namespace JeffersonSimaoGoncalves\Utils;
+namespace JeffersonSimaoGoncalves\Utility;
 
 use Cake\Core\BasePlugin;
 
@@ -16,7 +16,7 @@ use Cake\Core\BasePlugin;
  *
  * @author Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils
+ * @package JeffersonSimaoGoncalves\Utility
  */
 class Plugin extends BasePlugin
 {

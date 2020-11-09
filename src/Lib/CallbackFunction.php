@@ -4,7 +4,7 @@
  * Use to pass callback functions in the DataTables configuration.
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Lib;
+namespace JeffersonSimaoGoncalves\Utility\Lib;
 
 use JsonSerializable;
 
@@ -13,7 +13,7 @@ use JsonSerializable;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Lib
+ * @package JeffersonSimaoGoncalves\Utility\Lib
  */
 class CallbackFunction implements JsonSerializable
 {
