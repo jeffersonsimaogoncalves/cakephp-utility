@@ -1,12 +1,12 @@
 {
-  "name": "jeffersonsimaogoncalves/cakephp-utils",
+  "name": "jeffersonsimaogoncalves/cakephp-utility",
   "description": "CakePHP 3 plugin to provide basic support for building REST API services",
   "keywords": [
     "cakephp",
     "utils"
   ],
   "type": "cakephp-plugin",
-  "homepage": "https://github.com/jeffersonsimaogoncalves/cakephp-utils",
+  "homepage": "https://github.com/jeffersonsimaogoncalves/cakephp-utility",
   "license": "MIT",
   "authors": [
     {
@@ -16,8 +16,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/jeffersonsimaogoncalves/cakephp-utils/issues",
-    "source": "https://github.com/jeffersonsimaogoncalves/cakephp-utils"
+    "issues": "https://github.com/jeffersonsimaogoncalves/cakephp-utility/issues",
+    "source": "https://github.com/jeffersonsimaogoncalves/cakephp-utility"
   },
   "require": {
     "php": "^7.2",
