@@ -45,7 +45,7 @@ class RenderLink extends RenderBase
      */
     public function linkView(string $link, string $title = '', bool $modalView = false, string $modalViewTarget = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkView');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkView');
         $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
@@ -63,7 +63,7 @@ class RenderLink extends RenderBase
      */
     public function linkImage(string $link, string $title = '', bool $modalView = false, string $modalViewTarget = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkImage');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkImage');
         $this->typeLink = TypeLink::FILE_IMAGE;
         $this->link = $link;
         $this->title = $title;
@@ -79,7 +79,7 @@ class RenderLink extends RenderBase
      */
     public function linkAdd(string $link, string $title = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkAdd');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkAdd');
         $this->typeLink = TypeLink::VIEW;
         $this->link = $link;
         $this->title = $title;
@@ -104,7 +104,7 @@ class RenderLink extends RenderBase
      */
     public function linkBack(string $link, string $title = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkBack');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkBack');
         $this->typeLink = TypeLink::BACK;
         $this->link = $link;
         $this->title = $title;
@@ -119,7 +119,7 @@ class RenderLink extends RenderBase
      */
     public function linkEdit(string $link, bool $modalView = false, string $modalViewTarget = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkEdit');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkEdit');
         $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
         $this->classLink = $dados['classLink'];
@@ -135,7 +135,7 @@ class RenderLink extends RenderBase
      */
     public function linkPdf(string $link, bool $modalView = false, string $modalViewTarget = '')
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkPdf');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkPdf');
         $this->typeLink = TypeLink::FILE_PDF;
         $this->link = $link;
         $this->blank = true;
@@ -150,7 +150,7 @@ class RenderLink extends RenderBase
      */
     public function linkAccept(string $link)
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderLink.linkAccept');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderLink.linkAccept');
         $this->typeLink = TypeLink::EDIT;
         $this->link = $link;
         $this->classLink = $dados['classLink'];

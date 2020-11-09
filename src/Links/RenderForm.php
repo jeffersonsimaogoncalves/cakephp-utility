@@ -42,7 +42,7 @@ class RenderForm extends RenderBase
      */
     public function formStatus(string $link, bool $status)
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderForm.formStatus');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderForm.formStatus');
         $value = ($status) ? 'activate' : 'inactivate';
         $this->link = $link;
         $this->action = $dados[$value]['action'];
@@ -56,7 +56,7 @@ class RenderForm extends RenderBase
      */
     public function formDelete(string $link, string $description)
     {
-        $dados = Configure::read('JeffersonSimaoGoncalves/Utils.RenderForm.formDelete');
+        $dados = Configure::read('JeffersonSimaoGoncalves/Utility.RenderForm.formDelete');
         $this->link = $link;
         $this->classLink = $dados['classLink'];
         $this->classIcon = $dados['classIcon'];
