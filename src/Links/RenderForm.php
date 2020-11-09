@@ -5,7 +5,7 @@
  * Time: 13:36
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Links;
+namespace JeffersonSimaoGoncalves\Utility\Links;
 
 use Cake\Core\Configure;
 use Cake\Utility\Text;
@@ -21,7 +21,7 @@ use Cake\Utility\Text;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Links
+ * @package JeffersonSimaoGoncalves\Utility\Links
  */
 class RenderForm extends RenderBase
 {

@@ -5,14 +5,14 @@
  * Time: 13:43
  */
 
-namespace JeffersonSimaoGoncalves\Utils;
+namespace JeffersonSimaoGoncalves\Utility;
 
 /**
  * Class TypeLink
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils
+ * @package JeffersonSimaoGoncalves\Utility
  */
 class TypeLink
 {

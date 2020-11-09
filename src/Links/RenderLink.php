@@ -5,10 +5,10 @@
  * Time: 13:31
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Links;
+namespace JeffersonSimaoGoncalves\Utility\Links;
 
 use Cake\Core\Configure;
-use JeffersonSimaoGoncalves\Utils\TypeLink;
+use JeffersonSimaoGoncalves\Utility\TypeLink;
 
 /**
  * Class RenderLink
@@ -21,7 +21,7 @@ use JeffersonSimaoGoncalves\Utils\TypeLink;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Links
+ * @package JeffersonSimaoGoncalves\Utility\Links
  */
 class RenderLink extends RenderBase
 {

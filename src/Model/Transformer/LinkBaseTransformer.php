@@ -5,9 +5,9 @@
  * Time: 13:47
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Model\Transformer;
+namespace JeffersonSimaoGoncalves\Utility\Model\Transformer;
 
-use JeffersonSimaoGoncalves\Utils\Lib\RenderTrait;
+use JeffersonSimaoGoncalves\Utility\Lib\RenderTrait;
 use League\Fractal\TransformerAbstract;
 
 /**
@@ -15,7 +15,7 @@ use League\Fractal\TransformerAbstract;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Model\Transformer
+ * @package JeffersonSimaoGoncalves\Utility\Model\Transformer
  */
 abstract class LinkBaseTransformer extends TransformerAbstract
 {

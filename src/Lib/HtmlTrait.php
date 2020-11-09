@@ -5,7 +5,7 @@
  * Time: 18:25
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Lib;
+namespace JeffersonSimaoGoncalves\Utility\Lib;
 
 use HtmlGenerator\HtmlTag;
 
@@ -14,7 +14,7 @@ use HtmlGenerator\HtmlTag;
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Lib
+ * @package JeffersonSimaoGoncalves\Utility\Lib
  */
 trait HtmlTrait
 {

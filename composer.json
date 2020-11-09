@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "JeffersonSimaoGoncalves\\Utils\\": "src"
+      "JeffersonSimaoGoncalves\\Utility\\": "src"
     }
   },
   "minimum-stability": "stable",

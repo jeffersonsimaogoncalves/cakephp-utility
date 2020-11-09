@@ -5,25 +5,25 @@
  * Time: 11:33
  */
 
-namespace JeffersonSimaoGoncalves\Utils\Lib;
+namespace JeffersonSimaoGoncalves\Utility\Lib;
 
-use JeffersonSimaoGoncalves\Utils\Links\RenderForm;
-use JeffersonSimaoGoncalves\Utils\Links\RenderLink;
-use JeffersonSimaoGoncalves\Utils\TypeLink;
+use JeffersonSimaoGoncalves\Utility\Links\RenderForm;
+use JeffersonSimaoGoncalves\Utility\Links\RenderLink;
+use JeffersonSimaoGoncalves\Utility\TypeLink;
 
 /**
  * Trait RenderTrait
  *
  * @author  Jefferson Simão Gonçalves <gerson.simao.92@gmail.com>
  *
- * @package JeffersonSimaoGoncalves\Utils\Lib
+ * @package JeffersonSimaoGoncalves\Utility\Lib
  */
 trait RenderTrait
 {
     use HtmlTrait;
 
     /**
-     * @param \JeffersonSimaoGoncalves\Utils\Links\RenderLink $renderLink
+     * @param \JeffersonSimaoGoncalves\Utility\Links\RenderLink $renderLink
      *
      * @return string
      */
@@ -51,7 +51,7 @@ trait RenderTrait
     }
 
     /**
-     * @param \JeffersonSimaoGoncalves\Utils\Links\RenderForm $renderForm
+     * @param \JeffersonSimaoGoncalves\Utility\Links\RenderForm $renderForm
      *
      * @return string
      */
