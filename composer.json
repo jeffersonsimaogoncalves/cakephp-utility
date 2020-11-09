@@ -20,9 +20,9 @@
     "source": "https://github.com/jeffersonsimaogoncalves/cakephp-utils"
   },
   "require": {
-    "php": ">=7.0",
+    "php": "^7.2",
     "airmanbzh/php-html-generator": "^1.0",
-    "cakephp/utility": "^3.6",
+    "cakephp/utility": "^4.0",
     "league/fractal": ">=0.13.0"
   },
   "autoload": {
