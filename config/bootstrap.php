@@ -2,10 +2,10 @@
 
 use Cake\Core\Configure;
 
-Configure::write('JeffersonSimaoGoncalves/Utils.TableUtility', [
+Configure::write('JeffersonSimaoGoncalves/Utility.TableUtility', [
     'class' => 'table table-bordered table-striped table-responsive',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderForm.formStatus', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderForm.formStatus', [
     'activate'   => [
         'action'    => 'activate',
         'classLink' => 'btn btn-success',
@@ -17,35 +17,35 @@ Configure::write('JeffersonSimaoGoncalves/Utils.RenderForm.formStatus', [
         'classIcon' => 'glyphicon glyphicon-ban-circle',
     ],
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderForm.formDelete', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderForm.formDelete', [
     'classLink' => 'btn btn-danger',
     'classIcon' => 'glyphicon glyphicon-trash',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkView', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkView', [
     'classLink' => 'btn btn-default',
     'classIcon' => 'glyphicon glyphicon-eye-open',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkImage', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkImage', [
     'classLink' => 'btn btn-success imageview',
     'classIcon' => 'fa fa-picture-o',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkAdd', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkAdd', [
     'classLink' => 'btn btn-success',
     'classIcon' => 'glyphicon glyphicon-plus',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkBack', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkBack', [
     'classLink' => 'btn btn-default',
     'classIcon' => 'glyphicon glyphicon-list',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkEdit', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkEdit', [
     'classLink' => 'btn btn-primary',
     'classIcon' => 'glyphicon glyphicon-pencil',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkPdf', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkPdf', [
     'classLink' => 'btn btn-success',
     'classIcon' => 'fa fa-file-pdf-o',
 ]);
-Configure::write('JeffersonSimaoGoncalves/Utils.RenderLink.linkAccept', [
+Configure::write('JeffersonSimaoGoncalves/Utility.RenderLink.linkAccept', [
     'classLink' => 'btn btn-success',
     'classIcon' => 'fa fa-check-circle',
 ]);

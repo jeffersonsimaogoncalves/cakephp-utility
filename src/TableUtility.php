@@ -32,7 +32,7 @@ class TableUtility
     : array
     {
         return [
-            'class' => Configure::read('JeffersonSimaoGoncalves/Utils.TableUtility.class'),
+            'class' => Configure::read('JeffersonSimaoGoncalves/Utility.TableUtility.class'),
         ];
     }
 
